@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رزومه حسین اسدیان | توسعه‌دهنده بک‌اند Golang</title>
+    <meta name="description" content="رزومه حسین اسدیان، توسعه‌دهنده بک‌اند با تخصص در Golang، معماری تمیز و ساخت سرویس‌های مقیاس‌پذیر">
+    <meta name="keywords" content="رزومه, توسعه‌دهنده بک‌اند, Golang, معماری تمیز, میکروسرویس, حسین اسدیان">
+    <meta name="author" content="Hossein Asadian">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="رزومه حسین اسدیان | توسعه‌دهنده بک‌اند Golang">
+    <meta property="og:description" content="توسعه‌دهنده بک‌اند با تخصص در Golang، معماری تمیز و ساخت سرویس‌های مقیاس‌پذیر">
+    <meta property="og:type" content="website">
+    
+    <style>
+        /* Reset و تنظیمات پایه */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Vazir', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* هدر */
+        header {
+            background: linear-gradient(135deg, #2c3e50, #4a6491);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        header .title {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        header .description {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+            opacity: 0.85;
+            line-height: 1.8;
+        }
+        
+        /* بخش‌های اصلی */
+        section {
+            background: white;
+            margin: 25px 0;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        section h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #4a6491;
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+        
+        /* تجربه کاری */
+        .experience-item {
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .company {
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: #2c3e50;
+        }
+        
+        .date {
+            color: #666;
+            font-style: italic;
+            background: #f5f5f5;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        .responsibilities {
+            margin-top: 15px;
+            list-style-type: none;
+        }
+        
+        .responsibilities li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-right: 25px;
+            text-align: justify;
+        }
+        
+        .responsibilities li:before {
+            content: "•";
+            color: #4a6491;
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            right: 0;
+        }
+        
+        /* اطلاعات تماس */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #f5f7fa;
+            padding: 10px 15px;
+            border-radius: 6px;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .contact-item i {
+            color: #4a6491;
+            font-weight: bold;
+        }
+        .contact-item span{
+            direction:ltr;
+        }
+        
+        /* مهارت‌ها */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .skill-category {
+            margin-bottom: 20px;
+        }
+        
+        .skill-category h3 {
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill-tag {
+            background: #eef2f7;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-tag:hover {
+            background: #4a6491;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* تحصیلات و سایر بخش‌ها */
+        .education-item, .info-item {
+            margin-bottom: 15px;
+        }
+        
+        .info-item p {
+            margin-bottom: 10px;
+        }
+        
+        /* فوتر */
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+        }
+        
+        /* رسپانسیو */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            header .title {
+                font-size: 1.1rem;
+            }
+            
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .date {
+                margin-top: 8px;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+            
+            section {
+                padding: 20px;
+            }
+            
+            .contact-item {
+                min-width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header {
+                padding: 30px 15px;
+            }
+            
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .contact-info {
+                gap: 10px;
+            }
+        }
+    </style>
+    
+    <!-- فونت وزیر برای نمایش بهتر فارسی -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>حسین اسدیان</h1>
+            <div class="title">توسعه‌دهنده نرم‌افزار</div>
+            <div class="description">
+                توسعه‌دهنده بک‌اند مستقل و در عین حال تیم‌محور با تجربه در ساخت سرویس‌های مقیاس‌پذیر با Golang. متخصص در پیاده‌سازی معماری تمیز برای ارائه راه‌حل‌های ساختاریافته. علاقه‌مند به حل چالش‌های بک‌اند و مشارکت در ساخت سیستم‌های قابل اعتماد و با کیفیت.
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section id="experience">
+            <h2>سوابق کاری</h2>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="company">GoCasts — توسعه‌دهنده نرم‌افزار (مشارکت‌کننده)</div>
+                    <div class="date">اسفند ۱۴۰۳ - اکنون</div>
+                </div>
+                <p>به عنوان مشارکت‌کننده در پروژه متن‌باز <strong>Rankr</strong> تیم GoCats، مسئولیت‌های کلیدی من شامل موارد زیر بود:</p>
+		<ul class="responsibilities">
+		    <li>
+			<strong>معماری و توسعه سرویس GitHub Webhook با توان پردازش بالا</strong> 
+			با استفاده از Go برای دریافت و پردازش رویدادهای GitHub در مقیاس بزرگ، به عنوان لایه اصلی دریافت داده برای پلتفرم.
+		    </li>
+		    <li>
+			<strong>پیاده‌سازی راه‌حل بافرینگ در حافظه مبتنی بر Redis</strong> 
+			برای مدیریت درخواست‌های همزمان با حجم بالا، با پیاده‌سازی batch processing برای بهینه‌سازی نوشتن در پایگاه داده و system throughput.
+		    </li>
+		    <li>
+			<strong>طراحی و ساخت سیستم reconciliation پس‌زمینه</strong> 
+			که به صورت دوره‌ای رویدادهای تحویل GitHub را از طریق API دریافت می‌کند، وب‌هوک‌های از دست رفته یا ناموفق را شناسایی کرده و به طور خودکار تحویل مجدد را فعال می‌کند تا اطمینان از data consistency و completeness حاصل شود.
+		    </li>
+		    <li>
+			<strong>پیاده‌سازی event processing pipeline مقیاس‌پذیر</strong> 
+			با استفاده از Watermill برای انتشار و توزیع قابل اعتماد رویدادها در سراسر downstream systems.
+		    </li>
+		</ul>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>اطلاعات تماس</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i>ایمیل:</i>
+                    <a href="mailto:hosseinasadian442@gmail.com"><span>hosseinasadian442@gmail.com</span></a>
+                </div>
+                <div class="contact-item">
+                    <i>لینکدین:</i>
+                    <a href="https://linkedin.com/in/hosseinasadian"><span>LinkedIn</span></a>
+                </div>
+                <div class="contact-item">
+                    <i>گیت‌هاب:</i>
+                    <a href="https://github.com/hosseinasadian/"><span>Github</span></a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="education">
+            <h2>تحصیلات</h2>
+            <div class="education-item">
+                <div class="experience-header">
+                    <div class="company">دانشگاه تبریز</div>
+                </div>
+                <p>مهندسی مکانیک (کارشناسی)</p>
+            </div>
+        </section>
+        
+        <section id="additional-info">
+            <h2>اطلاعات تکمیلی</h2>
+            <div class="info-item">
+                <p>معافیت دائم از خدمت سربازی</p>
+            </div>
+        </section>
+        
+        <section id="languages">
+            <h2>زبان‌ها</h2>
+            <div class="info-item">
+                <p>انگلیسی - سطح متوسط پایین</p>
+            </div>
+        </section>
+        
+        <section id="skills">
+            <h2>مهارت‌ها</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>فن‌آوری‌های اصلی</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Golang</span>
+                        <span class="skill-tag">Echo Framework</span>
+                        <span class="skill-tag">RESTful APIs</span>
+                        <span class="skill-tag">gRPC</span>
+                        <span class="skill-tag">Protocol Buffers</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>معماری‌ها</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Monolithic</span>
+                        <span class="skill-tag">Microservices</span>
+                        <span class="skill-tag">Event-Driven</span>
+                        <span class="skill-tag">Message-Driven</span>
+                        <span class="skill-tag">Clean Architecture</span>
+                        <span class="skill-tag">Domain Driven Design</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>پایگاه‌های داده</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Redis</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>DevOps و محیط اجرا</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">DevOps Concepts</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>تست‌نویسی</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Unit Testing</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>کنترل نسخه</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Gitflow</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
